@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend><strong>Registration form</strong></legend>
+        <h1 style="text-align: center;">Registration form</h1>
+        <form style="text-align: center;" action="/submit_form" method="get">
+            <!-- registering area -->
+            <label for=" my name">Enter your name Username</label>
+            <input type="text" id="my name" name="my name" placeholder="enter your name" required><br><br>
+
+            <label for="name">Create Username</label>
+            <input type="text" id="name" name="name" placeholder="Create your username" required><br><br>
+
+            <label for="mail">Enter your email</label>
+            <input type="email" is="mail" name="mail" placeholder="enter your Email" required><br><br>
+
+            <label for="age">Enter your age</label>
+            <input type="number" id="age" name="age" placeholder="enter your Age" required><br><br>
+
+            <label for="password">Create your password</label>
+            <input type="password" id="password" name="password" placeholder="password" required><br><br>
+            <hr>
+            <!-- gender -->
+            <h2>Enter your gender</h2>
+            <label for="male">Male</label>
+            <input type="radio" id="male" value="male" name="gender" required><br><br>
+
+            <label for="Female">Female</label>
+            <input type="radio" id="Female" value="Female" name="gender" required><br><br>
+
+            <label for="Others">Others</label>
+            <input type="radio" id="others" value="others" name="gender"><br><br>
+
+            <label for="pnts">Prefer not to say</label>
+            <input type="radio" id="pnts" value="pnts" name="gender"><br><br>
+            <hr>
+            <!-- hobbies -->
+            <h2>Enter your hobbies</h2>
+            <label for="novel">Writting novels</label>
+            <input type="checkbox" id="write" value="checkbox" name="checkbox" required><br><br>
+
+            <label for=" read novel">Reading novels</label>
+            <input type="checkbox" id="read" value="checkbox" name="checkbox" required><br><br>
+
+            <label for=" playing">playing games</label>
+            <input type="checkbox" id="play" value="checkbox" name="checkbox" required><br><br>
+
+            <label for="collection">collection coins</label>
+            <input type="checkbox" id="collection" value="checkbox" name="checkbox" required><br><br>
+
+            <input type="submit" value="Now register" id="submit" required>
+
+        </form>
+    </fieldset>
+</body>
+
+</html>

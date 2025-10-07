@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <!-- in html the form element used to take the user input to
+     send to the server for processing the user input like name,number,
+     radio,checkboxes etc..
+     action: to send data to the server
+     method: to specify how data to be send -->
+    <fieldset>
+        <legend><strong>Submission form</strong></legend>
+        <form action="/submit_form" method="post">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
+
+            <label for="Age"> Your age</label>
+            <input type="number" id="age" value="age" name="age" placeholder="Enter your age"><br><br>
+
+            <label for="password">Create password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password"><br><br>
+
+            <input type="submit" value="submit">
+
+        </form>
+    </fieldset>
+</body>
+
+</html>
