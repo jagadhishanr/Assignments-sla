@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attribute selectors</title>
+
+    <style>
+        .one::placeholder {
+            color: brown;
+        }
+
+        .one {
+            background-color: blueviolet;
+            width: 300px;
+            height: 25px;
+        }
+
+        .two::placeholder {
+            color: rgb(255, 0, 174);
+        }
+
+        .two {
+            background-color: rgb(0, 249, 29);
+            width: 300px;
+            height: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <label for="name">Enter your name:</label>
+        <input class="one" type="text" name="text" placeholder="Enter your name">
+
+        <label for="password">Enter your password:</label>
+        <input class="two" type="password" name="password" placeholder="Enter your password">
+
+    </form>
+</body>
+
+</html>
