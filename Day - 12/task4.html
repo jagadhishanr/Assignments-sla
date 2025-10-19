@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Center Element Flexbox</title>
+    <style>
+        body{
+                height: 100vh;
+        }
+        .box {
+            height: 100px;
+            width: 100px;
+            background: rgb(75, 25, 25);
+            color: white;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .vertical{
+
+            display: flex;
+            align-items: flex-end;
+            color: rgb(255, 255, 255);
+            margin: 10px;
+        }
+
+        .horizontal{
+            display: flex;
+            justify-content: flex-end;
+            color: white;
+            margin: 10px;
+        }
+        .center{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+            <div class="horizontal">
+        <div class="box">Box1</div>
+        <div class="box">Box2</div>
+    </div>
+<hr>
+        <div class="center">
+        <div class="box">Box1</div>
+        <div class="box">Box2</div>   
+    </div>
+    <hr>
+    <div class="vertical">
+        <div class="box">Box1</div>
+        <div class="box">Box2</div>  
+    </div>
+    <hr>
+    </div>
+</body>
+</html>
