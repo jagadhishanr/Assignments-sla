@@ -1,0 +1,32 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.container{
+    border: 8px black solid;
+    margin: 20px;
+}
+.Grid-item{
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+.item-1{background-color: blue;}
+.item-2{background-color: rgb(140, 255, 0);}
+.item-3{background-color: rgb(2, 117, 8);}
+.item-4{background-color: rgb(156, 4, 128);}
+.item-5{background-color: rgb(128, 3, 26);}
+.item-6{background-color: rgb(182, 129, 4);}
+.item-7{background-color: rgb(5, 86, 115);}
+.item-8{background-color: rgb(4, 135, 164);}
+.item-9{background-color: rgb(5, 216, 167);}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,300px);
+    row-gap: 10px;
+    column-gap: 30px;
+    gap: 20px 50px;
+}
