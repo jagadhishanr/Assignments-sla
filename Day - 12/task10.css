@@ -1,0 +1,61 @@
+body{
+    background-color: black;
+}
+.hero{
+    margin: 10px;
+    border: 6px white solid;
+    height: 750px;
+    width: 1500px;
+    border-radius: 8px;
+}
+img{
+    border: 6px yellow solid;
+    border-radius: 18px;
+    height: 700px;
+    margin: 10px;
+    float: right;
+}
+#head{
+    color: white;
+    background-color: blueviolet;
+    padding: 30px;
+    border: 6px white solid;
+    border-radius: 10px;
+}
+#para1{
+    color: aliceblue;
+    background-color: rgb(111, 3, 57);
+    padding: 50px;
+    border: 6px white solid;
+    border-radius: 10px;
+}
+#para2{
+    color: rgb(255, 255, 255);
+    background-color: blue;
+    padding: 50px;
+    border: 6px white solid;
+    border-radius: 10px;
+}
+.place-1{
+    float: left;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 800px;
+    align-items: center;
+    margin: 30px;
+}
+.button{
+    display: flex;
+    gap: 100px;
+    align-items: flex-end;
+}
+.bt{
+    text-align: center;
+    padding: 20px;
+    background-color: aqua;
+    border: 6px white solid;
+    border-radius: 10px;
+    width: 100px;
+    margin-top: 100px;
+}
