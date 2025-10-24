@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>two column layout</title>
+    <style>
+        .container {
+            display: flex;
+            border: 8px black solid;
+            gap: 20px;
+            padding: 10px;
+            height: 900px;
+        }
+
+        .column {
+            flex: 1;
+            padding: 10px;
+            border: 5px black solid;
+            background-color: aqua;
+        }
+
+        .Mobile-column {
+            flex: 1;
+            padding: 10px;
+            border: 5px black solid;
+            background-color: rgb(0, 255, 157);
+                    }
+
+            @media (max-width: 480px) {
+                .Mobile-column {
+                    background-color: blue;
+                }
+            }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="column">column</div>
+        <div class="Mobile-column">Mobile-column</div>
+    </div>
+</body>
+
+</html>

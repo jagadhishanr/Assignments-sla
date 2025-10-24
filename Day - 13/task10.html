@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vw/vh - responsiveness</title>
+    <style>
+        .hero {
+  height: 100vh; 
+  width: 100vw;  
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 4vw;  
+  color: white;
+}
+
+.hero p {
+  font-size: 2vw;  
+  color: #f0f0f0;
+}
+
+button {
+  font-size: 1rem;
+  padding: 1em 2em;
+  margin-top: 1.5em;
+}
+
+    </style>
+</head>
+<body>
+    <section class="hero">
+  <div class="hero-content">
+    <h1>Welcome to Our Store</h1>
+    <p>Discover products you’ll love</p>
+    <button>Shop Now</button>
+  </div>
+</section>
+</body>
+</html>

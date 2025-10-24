@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product grid responsive</title>
+    <style>
+        .product-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
+}
+ .grid{
+    background-color: blue;
+    text-align: center;
+    color: white;
+    padding: 25px;
+ }
+
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+}
+
+    </style>
+</head>
+<body>
+    <div class="product-grid">
+        <div class="grid">product-grid-1</div>
+        <div class="grid">product-grid-2</div>
+        <div class="grid">product-grid-3</div>
+        <div class="grid">product-grid-4</div>
+        <div class="grid">product-grid-5</div>
+        <div class="grid">product-grid-6</div>
+        <div class="grid">product-grid-7</div>
+        <div class="grid">product-grid-8</div>
+        <div class="grid">product-grid-9</div>
+    </div>
+</body>
+</html>
