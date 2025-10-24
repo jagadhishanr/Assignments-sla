@@ -9,8 +9,8 @@ body{
     font-size: 2rem;
 }
 nav{
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    background-color: rgb(143, 5, 104);
+    color: rgb(255, 255, 255);
     display: flex;
     padding: 35px;
     justify-content: space-between;
@@ -78,3 +78,87 @@ img{
     align-items: center;
     margin: 30px;
 }
+.button{
+    display: flex;
+    gap: 100px;
+    align-items: flex-end;
+}
+.bt{
+    text-align: center;
+    padding: 20px;
+    background-color: aqua;
+    border: 6px white solid;
+    border-radius: 10px;
+    width: 100px;
+    margin-top: 100px;
+}
+.works{
+     margin: 10px;
+    border: 6px white solid;
+    height: 350px;
+    width: 1500px;
+    border-radius: 8px;
+}
+.jaga{
+    color: white;
+    text-align: center;
+    margin-top: 8px;
+}
+.area-1{background-color: orange;
+     color: white; 
+     text-align: center; 
+     border: 5px white solid;
+     border-radius: 8px;
+     width: 100px;
+     padding: 25px;
+    }
+    .area-2{background-color: rgb(85, 5, 244);
+     color: white; 
+     text-align: center; 
+     border: 5px white solid;
+     border-radius: 8px;
+     width: 100px;
+     padding: 25px;
+    }
+    .area-3{background-color: rgb(225, 255, 1);
+     color: white; 
+     text-align: center; 
+     border: 5px white solid;
+     border-radius: 8px;
+     width: 100px;
+     padding: 25px;
+    }
+    .area-4{background-color: rgb(6, 184, 244);
+     color: white; 
+     text-align: center; 
+     border: 5px white solid;
+     border-radius: 8px;
+     width: 100px;
+     padding: 25px;
+    }
+    .front{
+        display: flex;
+        width: 800px;
+        height: 100px;
+        border: 8px rgb(240, 11, 11) solid;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 20px;
+        padding: 10px;
+        color: white;
+        border-radius: 10px;
+    }
+        .Back{
+        display: flex;
+        width: 800px;
+        height: 100px;
+        border: 8px rgb(236, 6, 6) solid;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 20px;
+        padding: 10px;
+        color: white;
+        float: right;
+        border-radius: 10px;
+    }
+    
