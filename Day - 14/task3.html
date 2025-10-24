@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scale</title>
+    <style>
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .scale{
+            display: inline-block;
+            border: 6px black solid;
+            padding: 20px;
+            width: 300px;
+            height: 400px;
+        }
+        .scale:hover{
+            transition: 1s;
+            transform: scaleX(3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="scale">
+        <img src="my photo.jpg" width="300px" height="400px">
+    </div>
+    </div>
+</body>
+</html>

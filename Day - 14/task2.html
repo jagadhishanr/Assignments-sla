@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate text</title>
+    <style>
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .anim{
+            width: 200px;
+            height: 200px;
+            transition: 1s;
+            animation: ani;
+            animation-duration: 6s;
+        }
+        @keyframes ani{
+            from{
+                transform: translateX(-540px);
+            }
+            to{
+                transform: translateX(540px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="anim">
+        <h1>Animation in css</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, id.</p>
+    </div>
+    </div>
+</body>
+</html>

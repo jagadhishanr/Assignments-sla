@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotate</title>
+    <style>
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .rotate{
+            display: inline-block;
+            background-color: blue;
+            color: aliceblue;
+            text-align: center;
+            border: 6px black solid;
+            padding: 20px;
+            width: 300px;
+            height: 300px;
+            animation: box;
+            animation-duration: 6s;
+        }
+        @keyframes box{
+        from{
+            transform: rotatez(360deg);
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="rotate">
+        <h1>rotate box</h1>
+    </div>
+    </div>
+</body>
+</html>

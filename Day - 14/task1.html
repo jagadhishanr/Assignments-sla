@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover</title>
+    <style>
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hover{
+            display: inline-block;
+            background-color: blue;
+            color: aliceblue;
+            text-align: center;
+            border: 6px black solid;
+            padding: 20px;
+            width: 100px;
+        }
+        .hover:hover{
+            background-color: blueviolet;
+            border-radius: 50px;
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="hover">
+        <h1>Hover</h1>
+    </div>
+    </div>
+</body>
+</html>

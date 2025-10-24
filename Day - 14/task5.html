@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smooth Button Hover</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f2f4f8;
+      font-family: Arial, sans-serif;
+    }
+
+    .btn {
+      background-color: #0077ff;
+      color: white;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn:hover {
+      background-color: #005ce6;
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn:focus {
+      outline: none;
+      box-shadow: 0 0 0 4px rgba(0, 119, 255, 0.3);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <button class="btn">Hover Me</button>
+</body>
+</html>
