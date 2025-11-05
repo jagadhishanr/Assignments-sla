@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Remove List Item Example</title>
+</head>
+<body>
+  <ul id="myList">
+    <li>First item</li>
+    <li>Second item</li>
+    <li>Third item</li>
+  </ul>
+
+  <script>
+    const list = document.querySelector("#myList");
+    const firstItem = list.firstElementChild;
+    list.removeChild(firstItem);
+  </script>
+</body>
+</html>

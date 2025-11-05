@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Colors with Buttons</title>
+</head>
+<body>
+  <h2>Click a button to change the background color:</h2>
+
+  <button id="redBtn">Red</button>
+  <button id="greenBtn">Green</button>
+  <button id="blueBtn">Blue</button>
+  <button id="yellowBtn">Yellow</button>
+
+  <script>
+    const redBtn = document.querySelector("#redBtn");
+    const greenBtn = document.querySelector("#greenBtn");
+    const blueBtn = document.querySelector("#blueBtn");
+    const yellowBtn = document.querySelector("#yellowBtn");
+
+    redBtn.addEventListener("click", function() {
+      document.body.style.backgroundColor = "red";
+    });
+
+    greenBtn.addEventListener("click", function() {
+      document.body.style.backgroundColor = "green";
+    });
+
+    blueBtn.addEventListener("click", function() {
+      document.body.style.backgroundColor = "blue";
+    });
+
+    yellowBtn.addEventListener("click", function() {
+      document.body.style.backgroundColor = "yellow";
+    });
+  </script>
+</body>
+</html>

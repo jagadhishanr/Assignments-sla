@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Text Update</title>
+</head>
+<body>
+  <h2>Type something below:</h2>
+  
+  <input type="text" id="textInput" placeholder="Start typing..." />
+  <p id="outputText">Your text will appear here.</p>
+
+  <script>
+    const input = document.querySelector("#textInput");
+    const output = document.querySelector("#outputText");
+    input.addEventListener("input", function() {
+      output.textContent = input.value || "Your text will appear here.";
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Color & Add List Items</title>
+</head>
+<body>
+  <p id="myParagraph">This is a paragraph.</p>
+
+  <ul id="myList">
+  </ul>
+  <script>
+    const paragraph = document.querySelector("#myParagraph");
+    paragraph.style.color = "blue";
+    const list = document.querySelector("#myList");
+
+    for (let i = 1; i <= 3; i++) {
+      const listItem = document.createElement("li"); 
+      listItem.textContent = "List item " + i;       
+      list.appendChild(listItem);                    
+    }
+  </script>
+</body>
+</html>
