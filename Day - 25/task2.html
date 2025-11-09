@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Try...Catch...Finally Example</title>
+</head>
+<body>
+
+  <h2>Try...Catch...Finally Demo</h2>
+  <button id="runBtn">Run Code</button>
+
+  <script>
+    document.getElementById('runBtn').addEventListener('click', function() {
+      try {
+        console.log("Trying to run risky code...");
+        let result = undefinedVariable + 5;
+      } catch (error) {
+        console.error("Error caught:", error.message);
+      } finally {
+        console.log("Code executed.");
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Age Check</title>
+</head>
+<body>
+
+  <h2>Age Verification</h2>
+  <input type="number" id="ageInput" placeholder="Enter your age">
+  <button id="checkBtn">Check Age</button>
+
+  <p id="message"></p>
+
+  <script>
+    function checkAge(age) {
+      if (age < 18) {
+        throw new Error("Access denied: You must be at least 18 years old.");
+      }
+      return "Access granted! Welcome.";
+    }
+
+    const button = document.getElementById('checkBtn');
+    const message = document.getElementById('message');
+
+    button.addEventListener('click', function() {
+      const age = parseInt(document.getElementById('ageInput').value);
+
+      try {
+        const result = checkAge(age);
+        message.textContent = result;
+        message.style.color = "green";
+      } catch (error) {
+        message.textContent = error.message;
+        message.style.color = "red";
+      } finally {
+        console.log("Age check complete.");
+      }
+    });
+  </script>
+
+</body>
+</html>

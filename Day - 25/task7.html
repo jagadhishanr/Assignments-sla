@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Form Validation with try...catch</title>
+</head>
+<body>
+
+  <h2>Simple Form Validation</h2>
+
+  <form id="userForm">
+    <input type="text" id="name" placeholder="Enter your name"><br><br>
+    <input type="email" id="email" placeholder="Enter your email"><br><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="message"></p>
+
+  <script>
+    const form = document.getElementById('userForm');
+    const message = document.getElementById('message');
+
+    function validateForm(name, email) {
+      if (!name || name.trim() === "") {
+        throw new Error("Name is required.");
+      }
+      if (!email || email.trim() === "") {
+        throw new Error("Email is required.");
+      }
+      return `Form submitted successfully! Welcome, ${name}.`;
+    }
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+
+      try {
+        const successMessage = validateForm(name, email);
+        message.textContent = successMessage;
+        message.style.color = "green";
+      } catch (error) {
+        message.textContent = "Error: " + error.message;
+        message.style.color = "red";
+      } finally {
+        console.log("Form validation complete.");
+      }
+    });
+  </script>
+
+</body>
+</html>
