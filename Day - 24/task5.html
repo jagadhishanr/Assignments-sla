@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Throw Error Example</title>
+</head>
+<body>
+
+  <h2>Check for Negative Number</h2>
+  <input type="number" id="numInput" placeholder="Enter a number">
+  <button id="checkBtn">Check</button>
+
+  <p id="result"></p>
+
+  <script>
+    function checkNumber(num) {
+      if (num < 0) {
+        throw new Error("Number cannot be negative!");
+      }
+      return "Number is valid: " + num;
+    }
+
+    const input = document.getElementById('numInput');
+    const button = document.getElementById('checkBtn');
+    const result = document.getElementById('result');
+
+    button.addEventListener('click', function() {
+      try {
+        const value = parseFloat(input.value);
+        const message = checkNumber(value);
+        result.textContent = message;
+        result.style.color = "green";
+      } catch (error) {
+        result.textContent = error.message;
+        result.style.color = "red";
+      }
+    });
+  </script>
+
+</body>
+</html>

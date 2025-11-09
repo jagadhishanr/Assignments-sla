@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safe Color Changer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #colorBox {
+      width: 150px;
+      height: 150px;
+      background-color: lightgray;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      transition: background-color 0.3s ease;
+    }
+    button {
+      padding: 10px 15px;
+      font-size: 16px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Safe Color Changer</h2>
+  <div id="colorBox"></div>
+  <button id="changeColorBtn">Change Color</button>
+
+  <script>
+    const button = document.getElementById('changeColorBtn');
+
+    button.addEventListener('click', function() {
+      try {
+        const box = document.getElementById('colorBox');
+        if (!box) {
+          throw new Error("Element with ID 'colorBox' not found!");
+        }
+
+        const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+        box.style.backgroundColor = randomColor;
+
+      } catch (error) {
+        console.error("Error:", error.message);
+        alert("Oops! " + error.message);
+      }
+    });
+  </script>
+
+</body>
+</html>
