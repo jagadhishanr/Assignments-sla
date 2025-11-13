@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GitHub Profile Fetch</title>
+</head>
+<body>
+
+  <h2>GitHub User Info</h2>
+  <p><strong>Login:</strong> <span id="login"></span></p>
+  <p><strong>Public Repos:</strong> <span id="repos"></span></p>
+
+  <script>
+    async function loadGitHubUser() {
+      try {
+        const response = await fetch("https://api.github.com/users/jagadhishanr");
+        const data = await response.json();
+
+        document.getElementById("login").textContent = data.login;
+        document.getElementById("repos").textContent = data.public_repos;
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    }
+
+    loadGitHubUser();
+  </script>
+
+</body>
+</html>
