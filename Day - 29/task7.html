@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Fade Gallery</title>
+
+  <!-- jQuery CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <style>
+    #gallery img {
+      width: 300px;
+      display: none; /* all images hidden initially */
+    }
+  </style>
+</head>
+
+<body>
+
+<h2>Fade Photo Gallery</h2>
+
+<div id="gallery">
+  <img src="https://via.placeholder.com/300x200?text=Photo+1" class="photo" style="display:block;">
+  <img src="https://via.placeholder.com/300x200?text=Photo+2" class="photo">
+  <img src="https://via.placeholder.com/300x200?text=Photo+3" class="photo">
+</div>
+
+<br>
+
+<button id="prev">Previous</button>
+<button id="next">Next</button>
+
+<script>
+  let index = 0;
+  const photos = $(".photo");
+
+  $("#next").click(function () {
+    photos.eq(index).fadeOut(400, function () {
+      index = (index + 1) % photos.length;
+      photos.eq(index).fadeIn(400);
+    });
+  });
+
+  $("#prev").click(function () {
+    photos.eq(index).fadeOut(400, function () {
+      index = (index - 1 + photos.length) % photos.length;
+      photos.eq(index).fadeIn(400);
+    });
+  });
+</script>
+
+</body>
+</html>

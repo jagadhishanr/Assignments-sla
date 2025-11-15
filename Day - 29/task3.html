@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Toggle Image Example</title>
+
+  <!-- jQuery CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+<h2>Toggle Image Demo</h2>
+
+<button id="toggleBtn">Toggle Image</button>
+<br><br>
+
+<img id="myImage" src="https://via.placeholder.com/200" style="display: block;">
+
+<script>
+  $("#toggleBtn").click(function () {
+    $("#myImage").toggle(); // hide if visible, show if hidden
+  });
+</script>
+
+</body>
+</html>

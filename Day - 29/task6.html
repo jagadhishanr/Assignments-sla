@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Interactive Info Card</title>
+
+  <!-- jQuery CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+
+  <div class="card" id="infoCard" aria-expanded="false">
+    <div class="card-header" id="cardHeader" role="button" tabindex="0" aria-controls="cardBody">
+      <div class="title">JavaScript Basics — Quick Info</div>
+      <div class="toggle-icon" id="toggleIcon">▾</div>
+    </div>
+
+    <div class="card-body" id="cardBody">
+      <img src="https://picsum.photos/seed/js/800/400" alt="Decorative" class="card-image" id="cardImage">
+
+      <p class="meta" id="cardText">
+        JavaScript is a high-level, interpreted language used for web development. Click the buttons below to interact with this card.
+      </p>
+
+      <div class="controls">
+        <button class="btn" id="toggleImageBtn">Hide Image</button>
+        <button class="btn" id="colorBtn">Change Color</button>
+        <button class="btn primary" id="slideBtn">Slide Up / Down</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $(function () {
+      const $card = $('#infoCard');
+      const $header = $('#cardHeader');
+      const $body = $('#cardBody');
+      const $icon = $('#toggleIcon');
+      const $image = $('#cardImage');
+      const $toggleImageBtn = $('#toggleImageBtn');
+      const $colorBtn = $('#colorBtn');
+      const $slideBtn = $('#slideBtn');
+      const $cardText = $('#cardText');
+
+      // Helper to set aria-expanded and header class
+      function setExpanded(isExpanded) {
+        $card.attr('aria-expanded', isExpanded);
+        $header.toggleClass('expanded', isExpanded);
+      }
+
+      // Toggle expand/collapse on header click
+      $header.on('click keypress', function (e) {
+        // support Enter or Space keys
+        if (e.type === 'keypress' && !(e.key === 'Enter' || e.key === ' ')) return;
+
+        // slide body and flip icon
+        $body.stop(true, true).slideToggle(220);
+        const willExpand = $header.hasClass('expanded') === false;
+        setExpanded(willExpand);
+
+        // change toggle button text (and log)
+        console.log('Card', willExpand ? 'expanded' : 'collapsed', 'at', new Date().toLocaleTimeString());
+      });
+
+      // Toggle image visibility
+      $toggleImageBtn.on('click', function () {
+        if ($image.is(':visible')) {
+          $image.fadeOut(180);
+          $(this).text('Show Image');
+        } else {
+          $image.fadeIn(180);
+          $(this).text('Hide Image');
+        }
+      });
+
+      // Change color and text of the meta paragraph
+      let colorToggled = false;
+      $colorBtn.on('click', function () {
+        colorToggled = !colorToggled;
+        if (colorToggled) {
+          $cardText.css({ color: '#2c7a2c', 'font-weight': 700 }).text('Saved: Important note highlighted!');
+          $(this).text('Reset Text');
+        } else {
+          $cardText.css({ color: '', 'font-weight': '' }).text('JavaScript is a high-level, interpreted language used for web development. Click the buttons below to interact with this card.');
+          $(this).text('Change Color');
+        }
+      });
+
+      // Slide up/down effect on the whole body (separate from header toggle)
+      $slideBtn.on('click', function () {
+        // Use slideToggle to demonstrate sliding the details area
+        $body.stop(true, true).slideToggle(300);
+        // toggle header class to keep aria consistent
+        const isNowExpanded = $header.hasClass('expanded') === false;
+        setExpanded(isNowExpanded);
+        console.log('Slide button toggled body, expanded:', isNowExpanded);
+      });
+
+      // Initialize: keep body hidden, aria=false
+      setExpanded(false);
+
+      // Optional: open card if user clicks anywhere in card and it's collapsed
+      $card.on('dblclick', function () {
+        if (!$header.hasClass('expanded')) {
+          $header.click();
+        }
+      });
+
+    });
+  </script>
+</body>
+</html>
