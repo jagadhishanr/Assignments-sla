@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Current Time Logger</h2>
+<button onclick="saveCurrentTime()">Save Current Time</button>
+
+<script>
+  function saveCurrentTime() {
+    const now = new Date().toLocaleTimeString(); // get current time
+    console.log("Current time:", now);
+
+    sessionStorage.setItem("savedTime", now); // save to sessionStorage
+  }
+
+  // Show previously saved time (if any)
+  const previous = sessionStorage.getItem("savedTime");
+  if (previous) {
+    console.log("Previously saved time:", previous);
+  }
+</script>
+
+</body>
+</html>

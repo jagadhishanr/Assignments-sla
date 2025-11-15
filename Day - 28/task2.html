@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Session Time: <span id="time">0</span> seconds</p>
+
+<script>
+  if (!sessionStorage.getItem("sessionTime")) {
+    sessionStorage.setItem("sessionTime", 0);
+  }
+
+
+  setInterval(() => {
+    let time = Number(sessionStorage.getItem("sessionTime")) + 1;
+    sessionStorage.setItem("sessionTime", time);
+    document.getElementById("time").textContent = time;
+  }, 1000);
+</script>
+
+</body>
+</html>

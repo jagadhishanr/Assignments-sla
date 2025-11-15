@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Your Current Location</h2>
+<p>Latitude: <span id="lat">--</span></p>
+<p>Longitude: <span id="lon">--</span></p>
+
+<button onclick="getLocation()">Get Location</button>
+<button onclick="saveLocation()">Save Location</button>
+
+<script>
+  let currentLat = null;
+  let currentLon = null;
+
+  function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else {
+      alert("Geolocation is not supported by this browser.");
+    }
+  }
+
+  function showPosition(position) {
+    currentLat = position.coords.latitude;
+    currentLon = position.coords.longitude;
+
+    document.getElementById("lat").textContent = currentLat;
+    document.getElementById("lon").textContent = currentLon;
+  }
+
+  function showError(error) {
+    alert("Error getting location: " + error.message);
+  }
+
+  function saveLocation() {
+    if (currentLat && currentLon) {
+      const locationObj = {
+        latitude: currentLat,
+        longitude: currentLon
+      };
+
+      localStorage.setItem("savedLocation", JSON.stringify(locationObj));
+      alert("Location saved!");
+    } else {
+      alert("Please get your location first.");
+    }
+  }
+</script>
+
+</body>
+</html>

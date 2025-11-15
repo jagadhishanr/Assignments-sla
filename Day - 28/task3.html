@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+  // Create an object
+  const user = {
+    name: "John",
+    age: 22,
+    course: "Computer Science"
+  };
+
+
+  const jsonData = JSON.stringify(user);
+
+
+  localStorage.setItem("userData", jsonData);
+
+  console.log("Saved:", jsonData);
+</script>
+
+</body>
+</html>

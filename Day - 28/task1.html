@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <input id="name" placeholder="Enter your name"><br><br>
+  <input id="course" placeholder="Enter your course"><br><br>
+
+  <button onclick="saveData()">Save</button>
+
+  <script>
+    window.onload = function () {
+      document.getElementById("name").value = localStorage.getItem("name") || "";
+      document.getElementById("course").value = localStorage.getItem("course") || "";
+    };
+
+
+    function saveData() {
+      const name = document.getElementById("name").value;
+      const course = document.getElementById("course").value;
+
+      localStorage.setItem("name", name);
+      localStorage.setItem("course", course);
+
+      alert("Saved!");
+    }
+  </script>
+</body>
+</html>
