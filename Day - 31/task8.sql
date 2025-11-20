@@ -1,0 +1,5 @@
+ALTER TABLE assignments
+ADD CONSTRAINT fk_assignments_lesson
+FOREIGN KEY (lesson_id) REFERENCES lessons(id)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
