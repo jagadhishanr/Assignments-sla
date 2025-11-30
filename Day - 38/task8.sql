@@ -1,0 +1,11 @@
+DELIMITER $$
+
+CREATE FUNCTION calculate_tax(p_price DECIMAL(10,2))
+RETURNS DECIMAL(10,2)
+DETERMINISTIC
+BEGIN
+    DECLARE v_tax_rate DECIMAL(5,4) DEFAULT 0.10;  -- 10% tax
+    RETURN p_price * v_tax_rate;
+END$$
+
+DELIMITER ;
